@@ -1,8 +1,5 @@
-
+@echo off
 git add -A
-echo give me your comment 
-read -r string
-
-git commit -m "$string"
-
+set /p string=Give me your comment: 
+git commit -m "%string%"
 git push origin master
